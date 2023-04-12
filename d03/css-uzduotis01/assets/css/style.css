@@ -23,8 +23,7 @@ p {background-color: yellow;
 }
 
 /*Visi input turi buti su remeliu (border: 3px solid red;)*/
-input {border: 3px;
-    color:red
+input {border: 3px solid red
     ;}
 
 /* Visi elementai su klase 'hello', turi balta fona*/
@@ -34,12 +33,11 @@ input {border: 3px;
 
 /* Elementas su klase 'special' yra su 2px melynu remeliu, spalvos koda pasirinkite savo (border: 3px solid #XXXXXX;)*/
 .special {
-    border: 3px;
-    color: blue;
+    border: 3px solid blue;
 }
 
 /*Visu <p> kurie yra <div> viduje, srifto dydis yra 25px (font-size: 25px)*/
-section > div{
+div p{
      font: size 25px;
 }
 
@@ -47,7 +45,7 @@ section > div{
 /* gali reiketi google pagalbos*/
 
 /*<input> elementai su type="text" atributu turi pilka fona*/
-input[type=text] {background-color:grey
+input[type="text"] {background-color:grey
 }
 
 /* Abu <p> kurie yra trecio <div> viduje, turi ruzava fona*/
@@ -55,11 +53,11 @@ div:nth-of-type(3) p {background-color:pink
 }
 
 /* Label elementu tekstas yra rasomas didziosiomis raidemis*/
-label {text-transform: uppercase;
+label {text-transform: capitalize;
 }
 
 /* Pirmoji raide elementuose su klase "special" yra zalios spalvos ir 100px dydzio*/
-.special[first-letter] {color: green
+.special::first-letter {color: green
     size: 100px;
     ;}
 
@@ -68,5 +66,5 @@ h1:hover {color:blue
   }
 
 /* Aplankytos nuorodos <a> yra pilkos spalvos */
-div .a {color:grey}
+a:visited {color:grey}
 
