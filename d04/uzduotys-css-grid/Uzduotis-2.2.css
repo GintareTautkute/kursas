@@ -1,0 +1,41 @@
+html, body {
+    background-color: #ffeead;
+    margin: 10px;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px 70px 70px;
+    grid-template-areas:
+    "r r r r"
+    "b b g g"
+    "b b p l"
+}
+
+.red {
+    grid-area: r;
+    background-color:red
+}
+
+.blue {
+    grid-area: b;
+    background-color:blue
+}
+
+.green {
+    grid-area: g;
+    background-color:green
+}
+
+.purple1 {
+    grid-area: p;
+    background-color:purple
+}
+
+.purple2 {
+    grid-area: l;
+    background-color:purple
+}
