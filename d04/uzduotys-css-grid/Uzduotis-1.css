@@ -1,36 +1,47 @@
+/*General styling*/
+
 html, body {
     background-color: #ffeead;
-    margin: 10px;
+    margin: 10px; /*atitraukti krastams*/
 }
+
+.container > div {border-radius: 3px;} /*apvalinti staciakampiu kampai */
+
+.red {background-color: red;}
+.blue {background-color: blue;}
+.green {background-color:green;}
+.purple {background-color: purple;}
+.yellow {background-color:yellow;}
+
+/*solution #1 */
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template: repeat(3, 50px)/ repeat(4, 1fr); /* pirmas parametras nurodo eilutes, antras stulpelius */
+}
+
+.red {grid-column: 1 / 3;}
+.blue {grid-column: 3 / -1;}
+.green {grid-column: 1 / 2;}
+.purple {grid-column: 2 / -1;}
+.yellow {grid-column:1 / -1;}
+
+
+/*solution #2 
 
 .container {
     display: grid;
     grid-gap: 3px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 40px 200px 40px;
+    grid-template: repeat(3, 50px)/ repeat(4, 1fr);
+    grid-template-areas:
+    "r r b b"
+    "g p p p"
+    "y y y y"
 }
-
-.red {
-    grid-column: 1 / 3;
-    background-color:red
-}
-
-.blue {
-    grid-column: 3 / -1;
-    background-color:blue
-}
-
-.green {
-    grid-column: 1 / 2;
-    background-color:green
-}
-
-.purple {
-    grid-column: 2 / -1;
-    background-color:purple
-}
-
-.yellow {
-    grid-column:1 / -1;
-    background-color:yellow
-}
+.red {grid-area: r;}
+.blue {grid-area: b;}
+.green {grid-area: g;}
+.purple {grid-area: p;}
+.yellow {grid-area: y;}
+*/

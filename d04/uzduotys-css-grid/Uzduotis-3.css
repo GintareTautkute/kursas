@@ -1,75 +1,52 @@
-body {
-    background-color:white;
+/*General styling*/
+
+html,body {
     margin: 10px;
+    color: #fff;
 }
 
-.container {
-    color:white;
-    height: 100%;
-    display: grid;
-    grid-gap:3px;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto;
-    text-align:left;
-    grid-template-areas:
-    "h h h h"
-    "s c c p"
-    "f f f f"
+.container > div{
+    border-radius: 3px;
+    padding: 5px; /* dezuciu viduje teksto atstumas iki krastu */
 }
 
-.header {
-    grid-area: h;
+.header, .footer {
     background-color:grey;
 }
 
-.sidebar {
-    grid-area: s;
+.sidebar, .content {
     background-color:rgb(58, 57, 57);
-}
-
-.content {
-    grid-area: c;
-    background-color:rgb(58, 57, 57);
+    min-height: 100px;
 }
 
 .sidebar2 {
-    grid-area: p;
     background-color:darkgrey;
     color:black;
+    min-height: 100px;
 }
 
-.footer {
-    grid-area: f;
-    background-color: grey;
+/*Solution */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-gap:10px;
 }
 
-@media screen and (max-width: 900px) {
-    .container {
-    grid-template-areas:
-    "h h h h"
-    "s c c p"
-    "f f f f"
-    }
- }
+.header {grid-column: 1/-1;}
+.sidebar {grid-column: 1/2;}
+.content {grid-column: 2/4;}
+.sidebar2 {grid-column: 4/-1;}
+.footer {grid-column: 1/-1;}
 
- @media screen and (max-width: 750px) {
-    .container {
-    grid-template-areas:
-    "h h h h"
-    "s c c c"
-    "p p p p"
-    "f f f f"
+@media all and (max-width: 768px) {
+    .container {grid-template-rows: 50px auto 50px}
+    .content {grid-column: 2/-1;}
+    .sidebar2 {grid-column: 1/-1;}
     }
- }
- 
 
- @media screen and (max-width: 500px) {
-    .container { 
-        grid-template-areas:
-        "h h h h"
-        "s s s s"
-        "c c c c"
-        "p p p p"
-        "f f f f"
-        }
+ @media all and (max-width: 500px) {
+    .container {grid-template-rows: 50px auto auto auto 50px}
+    .sidebar, .content, .sidebar2 {grid-column: 1/-1;}
     }
