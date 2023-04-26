@@ -39,5 +39,5 @@ h2 {
 
 @media all and (max-width: 500px) {
     header {grid-template-rows: 50px auto auto auto 50px}
-    .container2, .container3, .container4, .container5, .container6 {grid-column: 1/-1;}
+    .container1, .container2, .container3, .container4, .container5, .container6 {grid-column: 1/-1;}
     }
