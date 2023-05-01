@@ -1,19 +1,18 @@
 *,
 *::before
 *::after {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 body {
     margin:0;
-    font-family: "Roboto", sans-serif;
+    font-family:"Roboto", sans-serif;
     font-weight:400;
     background-color:#e7e7e7;
 }
 
 .capitals-header {
     background-color: #177cc2;
-
 }
 
 .capitals-header h1 {
