@@ -77,6 +77,8 @@ section > .container{
     color:#f7f3ea;
     font-size:2.625rem; /*tikslas padalintas is konteksto*/
     line-height: 1.1428;
+    max-width:843px;
+    margin:0 auto;
 }
 
 .hero a, .contact .btn {
@@ -132,7 +134,7 @@ section > .container{
 .service {
     text-align: center;
     color: #fff;
-    max-width: 200px;
+    width: 200px;
     margin:80px auto 0; 
 }
 
@@ -142,7 +144,7 @@ section > .container{
     font-size:1.5rem;
 }
 
-.services p {
+.services-content p {
     font-size:1rem;
     line-height: 1.5;
     font-weight: 300;
@@ -187,7 +189,7 @@ section > .container{
 }
 
 .contact .section-content .contact-form .input-row input::placeholder,
-.contact .section-content .contact-form textarea input::placeholder {
+.contact .section-content .contact-form textarea::placeholder {
     color:#fff;
 }
 
@@ -235,7 +237,7 @@ section > .container{
     color:#fff;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.02em;
 }
 
@@ -258,6 +260,7 @@ section > .container{
         width:100%;
         display: block;
     }
+
     .mobile-nav ul {
         flex-direction: column;
         display:none;
